@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html langue="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Myne Arts</title>
+		<style id="estilo.css" type="text/css">
+			@charset "UTF-8";
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+			@import url(https://fonts.googleapis.com/css?family=Dosis);
+			@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+			@import url(https://fonts.googleapis.com/css?family=Cuprum);
+			@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+			body{
+				font-family: Arial, sans-serife;
+				background-color: #e5faff;
+			}
+
+			/*interface*/
+			div#interface{
+				
+			}
+
+			/*cabeçalho*/
+			header#cabecalho{
+				margin-top: -9px;
+				box-shadow: 5px 5px 5px #7ec4ff;
+				background-color: rgba(168,182,255,0.3);
+				border: 2px solid #0026e6;
+			}
+
+			header img{
+				position: absolute;
+				margin-left: 45px;
+				margin-top: -100px;
+			}
+
+			header#cabecalho h1{
+				font-family: 'Curlz MT';
+				color: #af00db;
+				font-size: 60pt;
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 0px;
+			}
+
+			header#cabecalho h2{
+				font-family: 'Open Sans', sans-serif;
+				color: #fe3cf7;
+				text-align: center;
+				margin-top: 0px;
+				text-shadow: 3px 3px 3px #ffcafd;
+			}
+
+			#aLogin{
+				font-size:15pt;
+				float: right;
+				background-color: #7ec4ff;
+			}
+
+			#aLogin:hover{
+				background-color: #af00db;
+				transition: 1s;
+			}
+
+			/*menu*/
+			nav#menu h1{
+				display: none;
+			}
+
+			nav#menu ul{
+				list-style: none;
+				text-align: center;
+			}
+
+			nav#menu li{
+				font-family: 'Inconsolata';
+				display: inline-block;
+				background-color: #7ec4ff;
+				text-shadow: 1px 1px 1px #4b4b4b;
+				padding: 8px;
+				margin-top: 10px;
+				margin-left: -20px;
+				margin-right: 20px;
+				transition: 1s;
+			}
+
+			nav#menu li:hover{
+				background-color: #af00db;
+				transition: 1s;
+			}
+
+			nav#menu a{
+				color: #000000;
+				text-decoration: none;
+				transition: 1s;
+			}
+
+			nav#menu a:hover{
+				text-decoration: underline;
+				color: #ffffff;
+				background-color: #af00db;
+				font-size:12.5pt;
+				transition: 1s;
+			}
+
+			/*corpo*/
+			section#corpo{
+				margin: 10% 0% 25% 0%;
+				color: #4e6bff;
+			}
+
+			section#corpo h1{
+				margin-top: 10%;
+				font-family: 'Cuprum', sans-serif;
+				color: #0026e6;
+				font-size: 30pt;
+				text-align: center;
+				margin-bottom: 50px;
+				text-shadow: 3px 3px 3px #7ec4ff;
+			}
+
+			section#corpo h2{
+				text-align: center;
+			}
+
+			section#corpo p#parg{
+				margin-top: 300px;
+				font-size: 15pt;
+				text-align: center;
+			}
+
+			/*imagens*/
+			figure{
+				float: left;
+				margin-left: 10%;
+				margin-bottom: 100px;
+			}
+
+			figure figcaption{
+				font-family: 'Fjalla One', sans-serif;
+				text-align: center;
+				color: #7ec4ff;
+				font-size: 25pt;
+				top: 10px;
+				transition: 1s;
+				text-shadow: 1px 1px 1px #c9c9c9;
+			}
+
+			figure:hover figcaption{
+				background-color: rgba(226, 226, 226, 0.8);
+			}
+
+			/*rodape*/
+			footer#rodape{
+				position: fixed;
+				bottom:0px;
+				width: 100%;
+				background-color: rgba(56,56,56,0.3);
+				color: #000000;
+				font-size: 10pt;
+				text-align: center;
+				border-top: 2px solid #000000;
+			}
+
+			footer#rodape a{
+				font-weight: bold;
+				color: #0026e6;
+				font-size: 15pt;
+				text-decoration: none;
+				text-shadow: 3px 3px 3px #7ec4ff;
+			}
+
+			footer#rodape a:hover{
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	
+	<body>
+	<div id="interface">
+	
+		<header id="cabecalho">
+				
+			<a id="aLogin" href="login">{{ login }}</a>
+			</br>
+			<nav id="menu">
+				<h1>Menu Principal</h1>
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="sobre">Sobre</a></li>
+					<li><a href="cadastro">Cadastro</a></li>
+					<li><a href="produto">Produtos</a></li>
+					<li><a href="login">Logout</a></li>
+				</ul>
+			</nav>
+			
+			<hgroup>
+				<h1>MyneArts</h1>
+				<h2>As melhores artes artesanais de crochê e bordado</h2>
+			</hgroup>
+			
+			
+		</header>
+		
+		<section id="corpo">
+			<div id="empresa">
+				<h1>História da Empresa</h1>
+				<h2>A Casa do Crochê é uma empresa voltada a produtos caseiros artesanais, criada com o intuito de levar aos cliente receba o melhor.</h2><p>
+				<h2>Criada em 2016, a empresa até entao nao possui local físico para atendimento, sendo ele feito apenas online.</h2><p>
+				<h2>A casa do Crochê dispoem de varios produtos que envolvam crochês e bordados, todos feito de modo caseiro e com muita dedicação da equipe.
+				</h2>
+			</div>
+			<div id="historia">
+				<h1>História do Crochê</h1>
+				<h2>																																					A palavra "crochê" tem origem no francês medieval croké, termo que designava um instrumento de ferro recurvado, uma espécie de gancho, que 			permitia suspender ou segurar alguma coisa. No século XIX, surge na França a expressão broder au crochet (literalmente, "bordar com o gancho").</h2><p>
+				<h2>
+					Ninguém tem a certeza de quando ou onde o crochê começou. Segundo os historiadores os trabalhos de crochê tem origem na Pré-história. A arte do crochê, como a conhecemos atualmente, foi desenvolvida no século XVI. O escritor dinamarquês Lis Paludan tentou descobrir a origem do crochê na Europa e fundamentou algumas teorias. A mais provável é a de que o crochê se originou na Arábia e chegou à Espanha pelas rotas comerciais do Mediterrâneo. Também há indícios posteriores da técnica em tribos da América do Sul, que usavam adornos de crochê em rituais da puberdade. Na China, bonecas eram feitas com a mesma técnica. Entretanto, o autor afirma que não há evidência concreta sobre o quão antiga é a arte do crochê.
+				</h2><p>
+				<h2>
+					A origem mais provável vem da técnica de costura chinesa, uma forma primitiva de bordado que foi difundida no Oriente Médio e chegou à Europa por volta de 1700. Mas o crochê só começou a ser fortemente difundido em 1800. A francesa Éléonore Riego de la Branchardière desenhou padrões que podiam ser facilmente duplicados e publicou em livros para que outras pessoas pudessem começar a copiar os desenhos. Os trabalhos com a técnica do crochê podem ser realizados com qualquer tipo de fio ou material, a depender da peça a ser executada - uma toalha delicada ou uma colcha, um casaco, um tapete resistente etc.
+				</h2>
+			</div>
+		</section>
+		
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Helbert Monteiro e Vitorio Silva</p>
+		</footer>
+		
+	</div>
+	</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html langue="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Myne Arts</title>
+		<style id="estilo.css" type="text/css">
+			@charset "UTF-8";
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+			@import url(https://fonts.googleapis.com/css?family=Dosis);
+			@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+			@import url(https://fonts.googleapis.com/css?family=Cuprum);
+			@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+			body{
+				font-family: Arial, sans-serife;
+				background-color: #e5faff;
+			}
+
+			/*interface*/
+			div#interface{
+				
+			}
+
+			/*cabeçalho*/
+			header#cabecalho{
+				margin-top: -9px;
+				box-shadow: 5px 5px 5px #7ec4ff;
+				background-color: rgba(168,182,255,0.3);
+				border: 2px solid #0026e6;
+			}
+
+			header img{
+				position: absolute;
+				margin-left: 45px;
+				margin-top: -100px;
+			}
+
+			header#cabecalho h1{
+				font-family: 'Curlz MT';
+				color: #af00db;
+				font-size: 60pt;
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 0px;
+			}
+
+			header#cabecalho h2{
+				font-family: 'Open Sans', sans-serif;
+				color: #fe3cf7;
+				text-align: center;
+				margin-top: 0px;
+				text-shadow: 3px 3px 3px #ffcafd;
+			}
+
+			/*menu*/
+			nav#menu h1{
+				display: none;
+			}
+
+			nav#menu ul{
+				list-style: none;
+				text-align: center;
+				margin-top: 34px;
+			}
+
+			nav#menu li{
+				font-family: 'Inconsolata';
+				display: inline-block;
+				background-color: #7ec4ff;
+				text-shadow: 1px 1px 1px #4b4b4b;
+				padding: 8px;
+				margin-top: 10px;
+				margin-left: -20px;
+				margin-right: 20px;
+				transition: 1s;
+			}
+
+			nav#menu li:hover{
+				background-color: #af00db;
+				transition: 1s;
+			}
+
+			nav#menu a{
+				color: #000000;
+				text-decoration: none;
+				transition: 1s;
+			}
+
+			nav#menu a:hover{
+				text-decoration: underline;
+				color: #ffffff;
+				background-color: #af00db;
+				font-size:12.5pt;
+				transition: 1s;
+			}
+
+			/*corpo*/
+			section#corpo{
+				margin: 10% 0% 25% 0%;
+				color: #0026e6;
+			}
+
+			section#corpo h1{
+				margin-top: 10%;
+				font-family: 'Cuprum', sans-serif;
+				color: #0026e6;
+				font-size: 30pt;
+				text-align: center;
+				margin-bottom: 50px;
+				text-shadow: 3px 3px 3px #7ec4ff;
+			}
+
+			section#corpo p#parg{
+				margin-top: 300px;
+				font-size: 15pt;
+				text-align: center;
+			}
+
+			/*imagens*/
+			figure{
+				float: left;
+				margin-left: 10%;
+				margin-bottom: 100px;
+			}
+
+			figure figcaption{
+				font-family: 'Fjalla One', sans-serif;
+				text-align: center;
+				color: #7ec4ff;
+				font-size: 25pt;
+				top: 10px;
+				transition: 1s;
+				text-shadow: 1px 1px 1px #c9c9c9;
+			}
+
+			figure:hover figcaption{
+				background-color: rgba(226, 226, 226, 0.8);
+			}
+
+			/*rodape*/
+			footer#rodape{
+				position: fixed;
+				bottom:0px;
+				width: 100%;
+				background-color: rgba(56,56,56,0.3);
+				color: #000000;
+				font-size: 10pt;
+				text-align: center;
+				border-top: 2px solid #000000;
+			}
+
+			footer#rodape a{
+				font-weight: bold;
+				color: #0026e6;
+				font-size: 15pt;
+				text-decoration: none;
+				text-shadow: 3px 3px 3px #7ec4ff;
+			}
+
+			footer#rodape a:hover{
+				text-decoration: underline;
+			}
+		</style>
+		<style id="forms.css" type="text/css">
+			@charset "UTF-8";
+
+			form{
+				width: 500px;
+				margin: auto;
+				background-color: rgba(168,182,255,0.3);
+			}
+
+			input, textarea{
+				font-family: sans-serif;
+				font-weight: normal;
+				background-color:#e5faff;
+			}
+
+			input:hover, textarea:hover{
+				background-color: #aaeaea;
+			}
+
+			#buttonRegistrar{
+				margin-left: 35px;
+			}
+
+			legend{
+				color: #000000;
+				font-weight: bold;
+				font-size: 13pt;
+				font-family: sans-serif;
+			}
+
+			fieldset{
+				border: 2px solid #0026e6;
+				box-shadow: 5px 5px 5px #4b4b4b;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	
+	<body>
+	<div id="interface">
+	
+		<header id="cabecalho">
+				
+			<nav id="menu">
+				<h1>Menu Principal</h1>
+				
+			</nav>
+			
+			<hgroup>
+				<h1>MyneArts</h1>
+				<h2>As melhores artes artesanais de crochê e bordado</h2>
+			</hgroup>
+			
+			
+		</header>
+		
+		<section id="corpo">
+			<h1>Contato</h1>
+			<form method="POST" id="fContato"> {% csrf_token %}
+				<fieldset id="usuario">
+					<legend>Identificação do Usuário</legend>
+						<p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"/></p>
+						<p><label for="cCPF">CPF:</label> <input type="text" name="tCPF" id="cCPF" size="20" maxlength="40" placeholder="CPF"/></p>
+						<p><label for="cFone">Fone:</label> <input type="text" name="tFone" id="cFone" size="20" maxlength="40" placeholder="Telefone"/></p>
+						<p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="exmp@exemp.com"/></p>
+						<p><label for="cCidade">Cidade:</label> <input type="text" name="tCidade" id="cSenha" size="20" maxlength="40" placeholder="Cidade"/></p>
+						<p><label for="cRua">Rua:</label> <input type="text" name="tRua" id="cRua" size="20" maxlength="40" placeholder="Rua"/></p>
+						<p><label for="cNumero">Numero:</label> <input type="text" name="tNumero" id="cNumero" size="20" maxlength="40" placeholder="Numero"/></p>
+						<p><label for="cBairro">Bairro:</label> <input type="text" name="tBairro" id="cBairro" size="20" maxlength="40" placeholder="Bairro"/></p>
+						<p><label for="cComplemento">Complemento:</label> <input type="text" name="tComplemento" id="cComplemento" size="20" maxlength="40" placeholder="Complemento"/></p>
+						<p><label for="cUsuario">Nome de usuário:</label> <input type="text" name="tUsuario" id="cUsuario" size="20" maxlength="40" placeholder="Nome de Usuário"/></p>
+						<p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="20" maxlength="40" placeholder="Senha"/></p>
+				</fieldset>
+				<button id="buttonRegistrar" type="submit">Registrar</button>
+			</form>
+
+		</section>
+		
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Helbert Monteiro e Vitorio Silva</p>
+		</footer>
+		
+	</div>
+	</body>
+</html>
